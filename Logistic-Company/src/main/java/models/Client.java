@@ -1,25 +1,25 @@
 package models;
 
-import java.math.BigDecimal;
-
-public class Company {
+public class Client {
 
     private int id;
     private String name;
     private String address;
     private String phone;
     private String email;
-    private BigDecimal totalRevenue;
+    private int companyId;
+    private boolean hasPaid;
 
-    public Company() {}
+    public Client() {}
 
-    public Company(int id, String name, String address, String phone, String email, BigDecimal totalRevenue) {
+    public Client(int id, String name, String address, String phone, String email, int companyId, boolean hasPaid) {
         this.id = id;
         this.name = name;
         this.address = address;
         this.phone = phone;
         this.email = email;
-        this.totalRevenue = totalRevenue;
+        this.companyId = companyId;
+        this.hasPaid = hasPaid;
     }
 
     public int getId() { return id; }
@@ -37,8 +37,11 @@ public class Company {
     public String getEmail() { return email; }
     public void setEmail(String email) { this.email = email; }
 
-    public BigDecimal getTotalRevenue() { return totalRevenue; }
-    public void setTotalRevenue(BigDecimal totalRevenue) { this.totalRevenue = totalRevenue; }
+    public int getCompanyId() { return companyId; }
+    public void setCompanyId(int companyId) { this.companyId = companyId; }
+
+    public boolean getHasPaid() { return hasPaid; }
+    public void setHasPaid(boolean hasPaid) { this.hasPaid = hasPaid; }
 }
 
 
